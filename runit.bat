@@ -1,1 +1,1 @@
-g++ -o main main.cpp -std=c++14 -I./include/ -I./backends/ -I./misc/
+g++ -o main main.cpp -std=c++20 -I./include/ -I./backends/ -I./misc/
