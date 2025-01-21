@@ -1,1 +1,1 @@
-g++ -o main main.cpp -std=c++20 -I./include/ -I./backends/ -I./misc/
+g++ -o .\build\main main.cpp -std=c++20 -I./include/ -I./backends/ -I./misc/ -L./lib/ -lglfw3dll -lglfw3 -lgdi32 -lopengl32

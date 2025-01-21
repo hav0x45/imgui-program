@@ -23,7 +23,7 @@ int main() {
     // Check if window is active or appearing
     ImGui::IsWindowAppearing();
 
-        GLFWwindow* window;
+    GLFWwindow* window;
 
     /* Initialize the library */
     if (!glfwInit()) {
