@@ -9,20 +9,6 @@
 
 int main() {
 
-    std::cout << "Hello ImGui!" << std::endl;
-
-    // Begin imgui window or instance idk
-    ImGui::Begin("Title", 0, 0);
-
-    // Dialog boolean
-    bool show_dialog = true;
-
-    // Set window size
-    ImGui::SetNextWindowSize(ImVec2(400, 200));
-
-    // Check if window is active or appearing
-    ImGui::IsWindowAppearing();
-
     GLFWwindow* window;
 
     /* Initialize the library */
@@ -37,6 +23,9 @@ int main() {
         glfwTerminate();
         return -1;
     }
+
+    // Begin imgui window or instance idk
+    ImGui::Begin("Title", 0, 0);
 
     // Make the window's context current
     glfwMakeContextCurrent(window);
