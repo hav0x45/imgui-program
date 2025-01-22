@@ -28,9 +28,7 @@ int main() {
     }
 
     // Begin imgui window
-    ImGui::SetNextWindowSize({640, 480});
     ImGui::Begin("My Window", 0, 0);
-    ImGui::Text("Works!");
 
     // Make the window's context current
     glfwMakeContextCurrent(window);
@@ -42,8 +40,8 @@ int main() {
 
     // Loop until the user closes the window
     while (!glfwWindowShouldClose(window)) {
-        glClear(GL_COLOR_BUFFER_BIT);
-        glClearColor(0, 255, 0, 255);   // Render here green screen
+        glad_glClear(GL_COLOR_BUFFER_BIT);
+        glad_glClearColor(0, 255, 0, 255);   // Render here green screen
         glfwSwapBuffers(window);        // Swap front and back buffers
         glfwPollEvents();               // Poll for and process events
     }
