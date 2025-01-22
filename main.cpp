@@ -11,34 +11,31 @@ int main() {
 
     GLFWwindow* window;
 
-    /* Initialize the library */
+    // Initialize the library
     if (!glfwInit()) {
 		return -1;
 	}
 
     // Create a window
     window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
-    if (!window)
-    {
+    if (!window) {
         glfwTerminate();
         return -1;
     }
 
-    // Begin imgui window or instance idk
-    ImGui::Begin("Title", 0, 0);
+    // Begin imgui window
+    ImGui::Begin("My Window", 0, 0);
 
     // Make the window's context current
     glfwMakeContextCurrent(window);
 
+    glClearColor(255, 0, 0, 255);
+
     // Loop until the user closes the window
-    while (!glfwWindowShouldClose(window))
-    {
-        // Render here
-        glClear(GL_COLOR_BUFFER_BIT);
-        // Swap front and back buffers
-        glfwSwapBuffers(window);
-        // Poll for and process events
-        glfwPollEvents();
+    while (!glfwWindowShouldClose(window) || (!GetAsyncKeyState(VK_ESCAPE))) {
+        glClear(GL_COLOR_BUFFER_BIT);   // Render here
+        glfwSwapBuffers(window);        // Swap front and back buffers
+        glfwPollEvents();               // Poll for and process events
     }
 
     glfwTerminate();
