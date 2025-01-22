@@ -33,7 +33,7 @@ int main() {
 
     // Loop until the user closes the window
     while (!glfwWindowShouldClose(window) || (!GetAsyncKeyState(VK_ESCAPE))) {
-        glClear(GL_COLOR_BUFFER_BIT);   // Render here
+        glClearColor(0, 255, 0, 255);   // Render here green screen
         glfwSwapBuffers(window);        // Swap front and back buffers
         glfwPollEvents();               // Poll for and process events
     }
