@@ -26,7 +26,9 @@ int main() {
     }
 
     // Begin imgui window
+    ImGui::SetNextWindowSize({640, 480});
     ImGui::Begin("My Window", 0, 0);
+    ImGui::Text("Works!");
 
     // Make the window's context current
     glfwMakeContextCurrent(window);
