@@ -1,5 +1,7 @@
 #define IMGUI_DEFINE_MATH_OPERATORS
 #include <iostream>
+#include <glad/glad.h>
+#include <glad/glad.c>
 #include <GLFW/glfw3.h>
 #include <imgui.h>
 #include <imgui.cpp>
