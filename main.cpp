@@ -36,8 +36,6 @@ int main() {
     int width = 640;
     int height = 480;
 
-    glfwGetFramebufferSize(window, &width, &height);
-
     // Loop until the user closes the window
     while (!glfwWindowShouldClose(window)) {
         glad_glClear(GL_COLOR_BUFFER_BIT);
