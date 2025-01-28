@@ -18,8 +18,11 @@ int main() {
 		return -1;
 	}
 
+    int width = 640;
+    int height = 480;
+
     // Create a window
-    window = glfwCreateWindow(640, 480, "Hello ImGui", NULL, NULL);
+    window = glfwCreateWindow(width, height, "Hello ImGui", NULL, NULL);
 
     // Check for window
     if (!window) {
@@ -33,12 +36,8 @@ int main() {
     // Make the window's context current
     glfwMakeContextCurrent(window);
 
-    int width = 640;
-    int height = 480;
-
     // Loop until the user closes the window
-    while (!glfwWindowShouldClose(window)) {
-        glad_glClear(GL_COLOR_BUFFER_BIT);
+    while (!glfwWindowShouldClose(window)  || GetAsyncKeyState(VK_SPACE)) {
         glad_glClearColor(0, 255, 0, 255);   // Render here green screen
         glfwSwapBuffers(window);        // Swap front and back buffers
         glfwPollEvents();               // Poll for and process events
